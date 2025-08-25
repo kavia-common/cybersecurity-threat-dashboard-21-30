@@ -36,7 +36,16 @@ export default [
   {
     languageOptions: {
       globals: {
+        // Browser environment globals to satisfy no-undef for window APIs
+        window: "readonly",
         document: "readonly",
+        navigator: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly",
+        requestAnimationFrame: "readonly",
+        cancelAnimationFrame: "readonly",
       },
     },
   },
